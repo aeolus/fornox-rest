@@ -1,0 +1,205 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "SupplierInvoice"
+  ],
+  "properties": {
+    "SupplierInvoice": {
+      "$id": "#/properties/SupplierInvoice",
+      "type": "object",
+      "title": "The Supplierinvoice Schema",
+      "required": [
+        "Currency",
+        "CurrencyRate",
+        "CurrencyUnit",
+        "DueDate",
+        "InvoiceDate",
+        "SupplierInvoiceRows",
+        "SupplierNumber",
+        "Total",
+        "VAT",
+        "VATType",
+        "SalesType"
+      ],
+      "properties": {
+        "Currency": {
+          "$id": "#/properties/SupplierInvoice/properties/Currency",
+          "type": "string",
+          "title": "The Currency Schema",
+          "default": "",
+          "examples": [
+            "SEK"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "CurrencyRate": {
+          "$id": "#/properties/SupplierInvoice/properties/CurrencyRate",
+          "type": "string",
+          "title": "The Currencyrate Schema",
+          "default": "",
+          "examples": [
+            "1"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "CurrencyUnit": {
+          "$id": "#/properties/SupplierInvoice/properties/CurrencyUnit",
+          "type": "integer",
+          "title": "The Currencyunit Schema",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        },
+        "DueDate": {
+          "$id": "#/properties/SupplierInvoice/properties/DueDate",
+          "type": "string",
+          "title": "The Duedate Schema",
+          "default": "",
+          "examples": [
+            "2020-01-25"
+          ],
+          "pattern": "^(\\d\\d\\d\\d-\\d\\d-\\d\\d)$",
+          "format": "date"
+        },
+        "InvoiceDate": {
+          "$id": "#/properties/SupplierInvoice/properties/InvoiceDate",
+          "type": "string",
+          "title": "The Invoicedate Schema",
+          "default": "",
+          "examples": [
+            "2020-01-03"
+          ],
+          "pattern": "^(\\d\\d\\d\\d-\\d\\d-\\d\\d)$",
+          "format": "date"
+        },
+        "SupplierInvoiceRows": {
+          "$id": "#/properties/SupplierInvoice/properties/SupplierInvoiceRows",
+          "type": "array",
+          "title": "The Supplierinvoicerows Schema",
+          "items": {
+            "$id": "#/properties/SupplierInvoice/properties/SupplierInvoiceRows/items",
+            "type": "object",
+            "title": "The Items Schema",
+            "required": [
+              "Account",
+              "Debit",
+              "Credit",
+              "Total"
+            ],
+            "properties": {
+              "Account": {
+                "$id": "#/properties/SupplierInvoice/properties/SupplierInvoiceRows/items/properties/Account",
+                "type": "integer",
+                "title": "The Account Schema",
+                "default": 0,
+                "examples": [
+                  2440
+                ]
+              },
+              "Code": {
+                "$id": "#/properties/SupplierInvoice/properties/SupplierInvoiceRows/items/properties/Code",
+                "type": "string",
+                "title": "The Code Schema",
+                "default": "",
+                "examples": [
+                  "TOT"
+                ],
+                "pattern": "^(TOT|VAT|FRT|AFE|ROV|CND|CNC|PRD|PRC|SRD|SRC)$"
+              },
+              "AccountDescription": {
+                "$id": "#/properties/SupplierInvoice/properties/SupplierInvoiceRows/items/properties/AccountDescription",
+                "type": "string",
+                "title": "The Accountdescription Schema",
+                "default": "",
+                "examples": [
+                  "Leverantörsskulder"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "Debit": {
+                "$id": "#/properties/SupplierInvoice/properties/SupplierInvoiceRows/items/properties/Debit",
+                "type": "number",
+                "title": "The Debit Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "Credit": {
+                "$id": "#/properties/SupplierInvoice/properties/SupplierInvoiceRows/items/properties/Credit",
+                "type": "number",
+                "title": "The Credit Schema",
+                "default": 0,
+                "examples": [
+                  10000
+                ]
+              },
+              "Total": {
+                "$id": "#/properties/SupplierInvoice/properties/SupplierInvoiceRows/items/properties/Total",
+                "type": "number",
+                "title": "The Total Schema",
+                "default": 0,
+                "examples": [
+                  -10000
+                ]
+              }
+            }
+          }
+        },
+        "SupplierNumber": {
+          "$id": "#/properties/SupplierInvoice/properties/SupplierNumber",
+          "type": "string",
+          "title": "The Suppliernumber Schema",
+          "default": "",
+          "examples": [
+            "1"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "Total": {
+          "$id": "#/properties/SupplierInvoice/properties/Total",
+          "type": "number",
+          "title": "The Total Schema",
+          "default": "",
+          "examples": [
+            "10000"
+          ]
+        },
+        "VAT": {
+          "$id": "#/properties/SupplierInvoice/properties/VAT",
+          "type": "number",
+          "title": "The Vat Schema",
+          "default": "",
+          "examples": [
+            "2000"
+          ]
+        },
+        "VATType": {
+          "$id": "#/properties/SupplierInvoice/properties/VATType",
+          "type": "string",
+          "title": "The Vattype Schema",
+          "default": "",
+          "examples": [
+            "NORMAL"
+          ],
+          "pattern": "^(NORMAL|EUINTERNAL|REVERSE)$"
+        },
+        "SalesType": {
+          "$id": "#/properties/SupplierInvoice/properties/SalesType",
+          "type": "string",
+          "title": "The Salestype Schema",
+          "default": "",
+          "examples": [
+            "STOCK"
+          ],
+          "pattern": "^(STOCK|SERVICE)$"
+        }
+      }
+    }
+  }
+}

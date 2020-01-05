@@ -1,0 +1,2 @@
+Leverantörsnr;Fakturadatum;Förfallodatum;Total;MOMS;Fakturanummer;Valuta;Vår referens;Er referens;MOMStyp;Konto (1st row);Credit (1st row);Konto (2nd row);Credit (2nd row);Konto (3rd row);Credit (3rd row);Konto (4th row);Debet (4th row)
+1;2019-12-10;2019-12-17;5 000,00;0,00;438005591001;SEK;Daenerys Targaryen;John Snow;Normal;2440;5 000,00;3001;270,00;2611;67,50;2420;5 337,50
